@@ -1,0 +1,3 @@
+CREATE EXTERNAL TABLE users (userid INT, age INT, gender STRING, occupation STRING, zipcode STRING) ROW FORMAT DELIMITED FIELDS TERMINATED BY '|' STORED AS TEXTFILE LOCATION '/user/cloudera/movielens';
+
+SELECT * FROM users;

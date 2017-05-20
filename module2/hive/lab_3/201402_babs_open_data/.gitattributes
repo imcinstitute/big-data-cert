@@ -1,0 +1,5 @@
+201402_station_data.csv filter=lfs diff=lfs merge=lfs -text
+201402_status_data.csv filter=lfs diff=lfs merge=lfs -text
+201402_trip_data.csv filter=lfs diff=lfs merge=lfs -text
+201402_weather_data.csv filter=lfs diff=lfs merge=lfs -text
+README.txt filter=lfs diff=lfs merge=lfs -text
