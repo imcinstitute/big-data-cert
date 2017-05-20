@@ -1,0 +1,9 @@
+CREATE EXTERNAL TABLE weblogTest(host STRING, time STRING, method STRING,
+object STRING, size STRING )
+ROW FORMAT SERDE 'org.apache.hadoop.hive.contrib.serde2.RegexSerDe' 
+WITH SERDEPROPERTIES (
+"input.regex" = "([^\\s]+) - - \\[(.+)\\] \"([^\\s]+) (/[^\\s]*) HTTP/[^\\s]+\" [^\\s]+ ([0-9]+)" 
+) STORED AS TextFile LOCATION "/user/cloudera/weblog"
+
+
+SELECT object, COUNT(1) AS COUNT FROM weblogtest GROUP BY object ORDER BY count DESC LIMIT 10
