@@ -1,0 +1,5 @@
+alter table test_tbl add columns (remarks STRING);
+
+describe test_tbl;
+
+drop table test_tbl;
