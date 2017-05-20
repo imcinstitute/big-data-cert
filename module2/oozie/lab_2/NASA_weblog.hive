@@ -1,0 +1,10 @@
+CREATE EXTERNAL TABLE IF NOT EXISTS weblogTest(
+host STRING,
+time STRING,
+method STRING,
+object STRING,
+size INT
+) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE LOCATION '/user/cloudera/csvoutput';
+
+select host,count(*) AS hit from weblogtest where host LIKE '%.th' GROUP BY host ORDER BY hit DESC;
+
