@@ -1,0 +1,8 @@
+CREATE TABLE test_tbl(id INT, country STRING) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE;
+
+show tables;
+
+describe test_tbl;
+
+INSERT INTO test_tbl VALUES (1,'thai');
+
